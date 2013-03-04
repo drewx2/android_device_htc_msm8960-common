@@ -66,11 +66,9 @@ PRODUCT_PACKAGES += \
     hci_qcomm_init
 
 # Camera
-#PRODUCT_PACKAGES += \
-    camera.dlx \
+PRODUCT_PACKAGES += \
     camera.msm8960 \
-    libmmcamera_interface \
-    libmmcamera_interface2
+    libmmcamera_interface
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -178,7 +176,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.thermal.monitor=true \
     ro.baseband.arch=msm \
     ro.opengles.version=131072 \
-    ro.product.wireless=WCN3660 \
+    ro.product.wireless=NL80211 \
     ro.qualcomm.bt.hci_transport=smd \
     ro.use_data_netmgrd=true \
     wifi.interface=wlan0 \
