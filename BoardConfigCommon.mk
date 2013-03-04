@@ -60,19 +60,19 @@ TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
 # Preload bootanimation
-TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_PRELOAD		:= true
 
 # QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE			:= true
 
 # Audio   
-BOARD_USES_ALSA_AUDIO 			:= true
-BOARD_HAVE_HTC_AUDIO 			:= true
+BOARD_USES_ALSA_AUDIO 				:= true
+BOARD_HAVE_HTC_AUDIO	 			:= true
 
 # Bluetooth
-
-BOARD_HAVE_BLUETOOTH 			:= true
-TARGET_CUSTOM_BLUEDROID 		:= ../../../device/htc/msm8960-common/bluetooth/bluetooth.c
+BOARD_HAVE_BLUETOOTH 				:= true
+BOARD_HAVE_BLUETOOTH_BCM			:= true
+TARGET_NEEDS_BLUETOOTH_INIT_DELAY	:= true
 
 # FM radio
 BOARD_HAVE_QCOM_FM := true
@@ -93,28 +93,26 @@ TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 
-# RIL
-#BOARD_RIL_CLASS := "../../../device/htc/msm8960-common/libril/"
-
 # Wifi
-DX2_BUILD						:= true
-BOARD_WLAN_DEVICE 				:= wl12xx_mac80211
-CONFIG_DRIVER_NL80211 			:= true
-WPA_SUPPLICANT_VERSION			:= VER_0_8_X
-#BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-BOARD_HOSTAPD_DRIVER			:= NL80211
-#BOARD_WLAN_DEVICE_REV 			:= bcm4334
+#DX2_BUILD							:= true
+#USES_TI_MAC80211					:= true
+BOARD_WLAN_DEVICE					:= wl12xx_mac80211 
+CONFIG_DRIVER_NL80211				:= true
+WPA_SUPPLICANT_VERSION				:= VER_0_8_X
+BOARD_WLAN_DEVICE_REV 				:= bcm4334
+BOARD_HOSTAPD_DRIVER				:= NL80211
+#WPA_BUILD_HOSTAPD			:= true
+#BOARD_WPA_SUPPLICANT_DRIVER    		:= NL80211
 #BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-#BOARD_HOSTAPD_DRIVER 			:= NL80211
-#BOARD_HOSTAPD_PRIVATE_LIB 		:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_AP 			:= "/system/etc/firmware/fw_bcm4334_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA 		:= "/system/etc/firmware/fw_bcm4334.bin"
-WIFI_DRIVER_FW_PATH_P2P 		:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
-WIFI_DRIVER_MODULE_NAME 		:= "bcmdhd"
-WIFI_DRIVER_MODULE_PATH 		:= "/system/lib/modules/bcmdhd.ko"
+#BOARD_HOSTAPD_PRIVATE_LIB 			:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_DRIVER_FW_PATH_AP 				:= "/system/etc/firmware/fw_bcm4334_apsta.bin"
+WIFI_DRIVER_FW_PATH_STA 			:= "/system/etc/firmware/fw_bcm4334.bin"
+WIFI_DRIVER_FW_PATH_P2P 			:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
+WIFI_DRIVER_MODULE_NAME 			:= "bcmdhd"
+WIFI_DRIVER_MODULE_PATH 			:= "/system/lib/modules/bcmdhd.ko"
 WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/etc/calibration"
-WIFI_BAND		 		:= 802_11_ABG
+WIFI_DRIVER_MODULE_ARG 				:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/etc/calibration"
+WIFI_BAND		 					:= 802_11_ABG
 
 # Webkit
 ENABLE_WEBGL := true 
