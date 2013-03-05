@@ -94,25 +94,16 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 
 # Wifi
-#DX2_BUILD							:= true
-#USES_TI_MAC80211					:= true
-BOARD_WLAN_DEVICE					:= wl12xx_mac80211 
-CONFIG_DRIVER_NL80211				:= true
-WPA_SUPPLICANT_VERSION				:= VER_0_8_X
-BOARD_WLAN_DEVICE_REV 				:= bcm4334
+DX2_BUILD_WIFI					:= true
+
 BOARD_HOSTAPD_DRIVER				:= NL80211
-#WPA_BUILD_HOSTAPD			:= true
-#BOARD_WPA_SUPPLICANT_DRIVER    		:= NL80211
-#BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-#BOARD_HOSTAPD_PRIVATE_LIB 			:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_AP 				:= "/system/etc/firmware/fw_bcm4334_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA 			:= "/system/etc/firmware/fw_bcm4334.bin"
 WIFI_DRIVER_FW_PATH_P2P 			:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_MODULE_NAME 			:= "bcmdhd"
 WIFI_DRIVER_MODULE_PATH 			:= "/system/lib/modules/bcmdhd.ko"
 WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_MODULE_ARG 				:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/etc/calibration"
-WIFI_BAND		 					:= 802_11_ABG
+
 
 # Webkit
 ENABLE_WEBGL := true 
