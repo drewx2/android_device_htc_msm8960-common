@@ -94,8 +94,8 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 
 # Wifi
-DX2_BUILD_WIFI						:= true
-DX2_WIFI_TYPE						:= wext
+DX2_WIFI_BUILD						:= true
+DX2_WIFI_TYPE						:= bcm4334
 
 # Webkit
 ENABLE_WEBGL := true 
