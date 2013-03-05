@@ -94,6 +94,8 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 
 # Wifi
+# DX2_WIFI_BUILD should be false unless you are drewx2
+# When set false, will copy working modules into your build
 DX2_WIFI_BUILD						:= true
 DX2_WIFI_TYPE						:= bcm4334
 
