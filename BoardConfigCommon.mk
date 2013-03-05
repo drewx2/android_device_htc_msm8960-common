@@ -94,8 +94,7 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 
 # Wifi
-DX2_BUILD_WIFI					:= true
-
+DX2_BUILD_WIFI						:= true
 WPA_SUPPLICANT_VERSION				:= VER_0_8_X
 BOARD_WLAN_DEVICE_REV 				:= bcm4334
 BOARD_HOSTAPD_DRIVER				:= NL80211
@@ -105,7 +104,7 @@ WIFI_DRIVER_FW_PATH_P2P 			:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_MODULE_NAME 			:= "bcmdhd"
 WIFI_DRIVER_MODULE_PATH 			:= "/system/lib/modules/bcmdhd.ko"
 WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
-
+WIFI_DRIVER_MODULE_ARG 				:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/etc/calibration"
 WIFI_BAND		 					:= 802_11_ABG
 
 # Webkit
