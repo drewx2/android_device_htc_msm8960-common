@@ -53,13 +53,13 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    alsa.msm8960 \
-    audio.a2dp.default \
+	audio.primary.default \
+	audio.primary.msm8960 \
+	audio.a2dp.default.so \
+  	alsa.msm8960 \
     audio_policy.default \
-    audio.primary.default \
-    audio.primary.msm8960 \
     libalsa-intf \
-    libaudioutils
+    libaudioutils \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -67,8 +67,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8960 \
-    libmmcamera_interface
+    camera.msm8960
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -78,22 +77,16 @@ PRODUCT_PACKAGES += \
     hwcomposer.default \
     hwcomposer.msm8960 \
     libgenlock \
-    libhwcexternal \
-    libhwcservice \
-    libmemalloc \
-    liboverlay \
-    libqdutils \
-    libtilerenderer 
-
+	liboverlay
+    
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8960
 
 # OMX
 PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
     libdivxdrmdecrypt \
-    libI420colorconvert \
-    libmm-omxcore \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
@@ -179,7 +172,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.wireless=NL80211 \
     ro.qualcomm.bt.hci_transport=smd \
     ro.use_data_netmgrd=true \
+    ro.debuggable=1 \
     wifi.interface=wlan0 \
-    htc.audio.global.state=0 \
-    htc.audio.global.profile=0 \
-    htc.audio.q6.topology=0
+    ro.qc.sdk.audio.fluencetype=fluence
