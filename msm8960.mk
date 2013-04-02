@@ -77,7 +77,12 @@ PRODUCT_PACKAGES += \
     hwcomposer.default \
     hwcomposer.msm8960 \
     libgenlock \
-	liboverlay
+    libhwcexternal \
+    libhwcservice \
+    libmemalloc \
+    liboverlay \
+    libqdutils \
+    libtilerenderer
     
 # Lights
 PRODUCT_PACKAGES += \
@@ -85,8 +90,9 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libdivxdrmdecrypt \
+    libI420colorconvert \
+    libmm-omxcore \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
